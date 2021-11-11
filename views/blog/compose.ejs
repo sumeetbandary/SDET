@@ -1,0 +1,37 @@
+<%- include('partials/header'); %> <%- include('partials/navbar'); %>
+
+
+<div class="container compose mt-5 px-4" style="background-color: #787a91">
+  <h1>Compose</h1>
+  <hr>
+	<div class="form-group">
+		<form action="/compose" method="POST">
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label"
+					><h3>Title</h3></label
+				>
+				<input
+					type="text"
+					class="form-control"
+					id="exampleFormControlInput1"
+					placeholder="Day 1"
+          name="title"
+				/>
+			</div>
+			<div class="mb-3">
+				<label for="exampleFormControlTextarea1" class="form-label"
+					><h3>Article</h3></label
+				>
+				<textarea
+					class="form-control"
+					id="exampleFormControlTextarea1"
+					rows="5"
+          name="article"
+				></textarea>
+        <button type="submit" class="btn btn-primary mt-4 mb-4">Publish</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<%- include('partials/footer'); %>
