@@ -11,11 +11,11 @@ router.get("/", function (req, res, next) {
 	// 	res.render("blog/home", { title: arr[i].title, article: arr[i].article });
 	// }
 	var data = fs.readFileSync("public/posts.json");
-	var post = JSON.parse(data);
+	var posts = JSON.parse(data);
 	console.log(typeof post);
 	res.render("blog/home", {
 		homecontent: homecontent,
-		post: post,
+		posts: posts,
 	});
 });
 

@@ -4,5 +4,13 @@ include('partials/compose-button') %>
 	<h1>Home</h1>
 	<p><%= homecontent %></p>
 </div>
+
+<div class="container">
+    <%  Array.from(posts.post_array).forEach(function(post_array){ %>
+    <h1><%=post_array.title%></h1>
+    <p><%=post_array.article%></p>
+    <% }) %>
+</div>
+
  <%- include('partials/footer'); %>
 </post.length;i++)>

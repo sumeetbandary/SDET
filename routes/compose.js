@@ -21,7 +21,7 @@ router.post("/", function (req, res) {
 			console.log(err);
 		} else {
 			var data = JSON.parse(data);
-			data.post.push(obj);
+			data.post_array.push(obj);
 
 			const json = JSON.stringify(data);
 			fs.writeFile("public/posts.json", json, function (err) {
