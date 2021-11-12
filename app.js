@@ -20,11 +20,13 @@ var homeRouter = require("./routes/home");
 var aboutRouter = require("./routes/about.js");
 var contactRouter = require("./routes/contact.js");
 var composeRouter = require("./routes/compose.js");
+var postRouter = require("./routes/post.js");
 
 app.use("/", homeRouter);
 app.use("/about/", aboutRouter);
 app.use("/contact/", contactRouter);
 app.use("/compose", composeRouter);
+app.use("/post", postRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

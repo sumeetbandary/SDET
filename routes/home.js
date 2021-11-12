@@ -12,7 +12,6 @@ router.get("/", function (req, res, next) {
 	// }
 	var data = fs.readFileSync("public/posts.json");
 	var posts = JSON.parse(data);
-	console.log(typeof post);
 	res.render("blog/home", {
 		homecontent: homecontent,
 		posts: posts,
