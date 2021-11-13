@@ -6,10 +6,18 @@ include('partials/compose-button') %>
 </div>
 
 <div class="container">
-	<% Array.from(posts.post_array).forEach(function(post_array){ %>
-	<h4><%=post_array.title%></h4>
-	<p><%=post_array.article%></p>
-	<% }) %>
+	<div class="row">
+		<% Array.from(posts.post_array).forEach(function(post_array){ %>
+		<div class="col-lg-4 mt-3 mb-3">
+			<div class="container border border-secondary">
+				<a class="link-secondary" style="text-decoration: none" href="/post/<%=post_array.title %> ">
+					<h4><%=post_array.title%></h4>
+				</a>
+				<p><%=post_array.article.substring(0,350)%></p>
+			</div>
+		</div>
+		<% }) %>
+	</div>
 </div>
 
 <%- include('partials/footer'); %>
