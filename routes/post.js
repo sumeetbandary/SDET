@@ -1,4 +1,5 @@
 var express = require("express");
+var _ = require("lodash");
 var router = express.Router();
 var fs = require("fs");
 
@@ -10,7 +11,8 @@ router.get("/:routeparmeter", (req, res) => {
 
 	// Looping the post_array in the posts object and checking if the title name mactched with titleName
 	Array.from(posts.post_array).forEach(function (element) {
-		if (titleName === element.title) console.log("Match found");
+		if (_.toLower(titleName) === _.toLower(element.title))
+			console.log("Match found");
 	});
 	console.log("Done searching");
 });
