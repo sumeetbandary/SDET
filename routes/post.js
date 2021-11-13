@@ -11,8 +11,12 @@ router.get("/:routeparmeter", (req, res) => {
 
 	// Looping the post_array in the posts object and checking if the title name mactched with titleName
 	Array.from(posts.post_array).forEach(function (element) {
-		if (_.toLower(titleName) === _.toLower(element.title))
-			console.log("Match found");
+		if (_.toLower(titleName) === _.toLower(element.title)) {
+			res.render("blog/post", {
+				title: element.title,
+				article: element.article,
+			});
+		}
 	});
 	console.log("Done searching");
 });
