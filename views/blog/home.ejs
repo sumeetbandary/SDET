@@ -9,7 +9,7 @@ include('partials/compose-button') %>
 	<div class="row">
 		<% Array.from(posts.post_array).forEach(function(post_array){ %>
 		<div class="col-lg-4 mt-3 mb-3">
-			<div class="container border border-secondary">
+			<div class="article-box container border border-secondary">
 				<a class="link-secondary" style="text-decoration: none" href="/post/<%=post_array.title %> ">
 					<h4><%=post_array.title%></h4>
 				</a>
