@@ -1,9 +1,9 @@
 <%- include('partials/header'); %> <%- include('partials/navbar'); %> <%-
 include('partials/compose-button') %>
-<div class="container mt-4">
+<!-- <div class="container mt-4">
 	<h1>Home</h1>
 	<p><%= homecontent %></p>
-</div>
+</div> -->
 
 <div class="container">
 	<div class="row">
@@ -13,7 +13,8 @@ include('partials/compose-button') %>
 				<a class="link-secondary" style="text-decoration: none" href="/post/<%=post_array.title %> ">
 					<h4><%=post_array.title%></h4>
 				</a>
-				<p><%=post_array.article.substring(0,350)%></p>
+				<p><strong>Description:</strong> <%=post_array.description%></p>
+				<p><%=post_array.content.substring(0,350)%></p>
 			</div>
 		</div>
 		<% }) %>

@@ -14,7 +14,9 @@ router.get("/:routeparmeter", (req, res) => {
 		if (_.toLower(titleName) === _.toLower(element.title)) {
 			res.render("blog/post", {
 				title: element.title,
-				article: element.article,
+				description: element.description,
+				content: element.content,
+				author: element.author
 			});
 		}
 	});

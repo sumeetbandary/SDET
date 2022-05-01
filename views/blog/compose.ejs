@@ -1,37 +1,52 @@
-<%- include('partials/header'); %> <%- include('partials/navbar'); %>
+<%- include('partials/header'); %>
+	<%- include('partials/navbar'); %>
 
-
-<div class="container compose mt-5 px-4" style="background-color: #787a91">
-  <h1>Compose</h1>
-  <hr>
-	<div class="form-group">
-		<form action="/compose" method="POST">
-			<div class="mb-3">
-				<label for="exampleFormControlInput1" class="form-label"
-					><h3>Title</h3></label
-				>
-				<input
-					type="text"
-					class="form-control"
-					id="exampleFormControlInput1"
-					placeholder="Day 1"
-          name="title"
-				/>
+		<div class="container compose mt-5 px-4" style="background-color: #787a91">
+			<h1>Compose</h1>
+			<hr />
+			<div class="form-group">
+				<form action="/compose" method="POST">
+					<!-- News ID -->
+					<div class="mb-3">
+						<label for="exampleFormControlInput1" class="form-label">
+							<h3>News ID</h3>
+						</label>
+						<input type="text" class="form-control" id="exampleFormControlInput1" placeholder=""
+							name="news_id" />
+					</div>
+					<!-- News Title -->
+					<div class="mb-3">
+						<label for="exampleFormControlInput2" class="form-label">
+							<h3> News Title</h3>
+						</label>
+						<input type="text" class="form-control" id="exampleFormControlInput1" placeholder=""
+							name="news_title" />
+						<!-- News Author -->
+						<div class="mb-3">
+							<label for="exampleFormControlInput3" class="form-label">
+								<h3>News Author</h3>
+							</label>
+							<input type="text" class="form-control" id="exampleFormControlInput1" placeholder=""
+								name="news_author" />
+							<!-- News Description -->
+							<div class="mb-3">
+								<label for="exampleFormControlInput4" class="form-label">
+									<h3>News Description</h3>
+								</label>
+								<input type="text" class="form-control" id="exampleFormControlInput1"
+									placeholder="" name="news_description" />
+							</div>
+							<!-- News Content -->
+							<div class="mb-3">
+								<label for="exampleFormControlTextarea5" class="form-label">
+									<h3>News Content</h3>
+								</label>
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+									name="news_content"></textarea>
+								<button type="submit" class="btn btn-primary mt-4 mb-4">Publish</button>
+							</div>
+				</form>
 			</div>
-			<div class="mb-3">
-				<label for="exampleFormControlTextarea1" class="form-label"
-					><h3>Article</h3></label
-				>
-				<textarea
-					class="form-control"
-					id="exampleFormControlTextarea1"
-					rows="5"
-          name="article"
-				></textarea>
-        <button type="submit" class="btn btn-primary mt-4 mb-4">Publish</button>
-			</div>
-		</form>
-	</div>
-</div>
+		</div>
 
-<%- include('partials/footer'); %>
+		<%- include('partials/footer'); %>

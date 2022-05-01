@@ -13,8 +13,11 @@ router.get("/", function (req, res, next) {
 
 router.post("/", function (req, res) {
 	var obj = {
-		title: req.body.title,
-		article: req.body.article,
+		id: req.body.news_id,
+		title: req.body.news_title,
+		author: req.body.news_author,
+		description: req.body.news_description,
+		content: req.body.news_content,
 	};
 	fs.readFile("public/posts.json", function (err, data) {
 		if (err) {
@@ -32,6 +35,6 @@ router.post("/", function (req, res) {
 			});
 		}
 	});
-	res.redirect("/");
+	res.redirect("/compose");
 });
 module.exports = router;
